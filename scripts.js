@@ -33,4 +33,33 @@ document.addEventListener('DOMContentLoaded', function() {
             nav.classList.add('transparent');
         }, 200);
     });
+
+    const listItems = document.querySelectorAll('.unlisted-list li');
+    const sectionsToChange = document.querySelectorAll('.content-to-changes');
+
+    // Add the active class to the SKILLS item by default and show the skills content
+    listItems.forEach(item => {
+        if (item.getAttribute('data-section') === 'skills') {
+            item.classList.add('active');
+        }
+    });
+
+    listItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // Remove the active class from all items
+            listItems.forEach(li => li.classList.remove('active'));
+            
+            // Add the active class to the clicked item
+            this.classList.add('active');
+            
+            // Hide all content sections
+            sectionsToChange.forEach(section => section.style.display = 'none');
+            
+            // Show the clicked content section
+            const sectionToShow = document.getElementById(this.getAttribute('data-section'));
+            if (sectionToShow) {
+                sectionToShow.style.display = 'block';
+            }
+        });
+    });
 });

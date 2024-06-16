@@ -10,15 +10,15 @@
 <body>
     <nav>
         <ul>
-            <li><a href="#about">About Me</a></li>
+            <li><a href="#aboutMe">About Me</a></li>
             <li><a href="#section1">Section 1</a></li>
             <li><a href="#section2">Section 2</a></li>
             <li><a href="#section3">Section 3</a></li>
         </ul>
     </nav>
 
-    <section id="about1" class="fade-in-section">
-        <div class="about-content">
+    <section id="aboutMe">
+        <div class="about-content fade-in-section">
             <div class="about-text">
                 <div class="about-me-title-container">
                     <h1 class="about-me-title">ABOUT ME</h1>
@@ -28,7 +28,25 @@
                 Completed 1130 hours of internship experience, primarily focused on web development, 
                 and eager to learn and expand my skills. Quick learner with a keen interest 
                 in tackling new challenges and mastering new technologies.</p>
-               
+               <ul class="unlisted-list">
+                <li class="active" data-section="skills">SKILLS</li>
+                <li data-section="experience">EXPERIENCE</li>
+                <li data-section="education">EDUCATION</li>
+               </ul>
+               <div id="skills" class="content-to-changes">
+                <h2>Skills Section</h2>
+                <p>Content related to skills...</p>
+            </div>
+            <div id="experience" class="content-to-changes" style="display: none;">
+                <strong>Full-Stack Developer Intern <br> Hiraya Technology Solutions Inc. Nov 2024 - Jun 2024</strong>
+                <ul>
+                    <li>Implement the design on frontend from figma and handle backend API</li>
+                </ul>
+            </div>
+            <div id="education" class="content-to-changes" style="display: none;">
+                <h2>Education Section</h2>
+                <p>Content related to education...</p>
+            </div>
                 <div class="image-row">
                     <button class="btn">Connect</button>
                     <a href="https://github.com/Niirdla" target="_blank"><img src="assets/img/github-logo.svg" alt="Github logo"></a>
@@ -40,8 +58,8 @@
             </div>
         </div>
     </section>
-    <section id="about2" class="fade-in-section">
-        <div class="about-content">
+    <section id="about2">
+        <div class="about-content fade-in-section">
             <div class="about-text">
                 <div class="about-me-title-container">
                     <h1 class="about-me-title">ABOUT ME</h1>
