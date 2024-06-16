@@ -7,6 +7,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background:  #1B263B;
 }
 
 header {
@@ -56,20 +57,15 @@ nav ul li a {
 nav ul li a:hover {
     transform: scale(1.1); /* Scale up the a */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for a 3D effect */
+    color:#0074D9;
 }
 
 section {
     padding: 2rem;
-    opacity: 0;
     transform: translateY(1.25rem); /* 20px -> 1.25rem */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     background: #1B263B; /* Light dark background color */
     color: white; /* Ensure text is readable on dark background */
-}
-
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 #about {
@@ -102,6 +98,7 @@ section.visible {
 
 .about-me-description {
     text-align: justify;
+    color:#8290a1;
 }
 
 .about-me-title {
@@ -147,7 +144,7 @@ section.visible {
 .fade-in-section {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.3s ease-out, transform 0.6s ease-out;
+    transition: opacity 1s ease-out, transform 0.6s ease-out;
 }
 
 .fade-in-section.visible {
@@ -157,7 +154,7 @@ section.visible {
 
 .btn {
     padding: 12px 24px;
-    background-color: #0074D9; /* Adjusted to a darker blue for better visibility */
+    background-color: #0D1B2A; /* Adjusted to a darker blue for better visibility */
     color: #fdfeff; /* Lighter dark color for better contrast */
     border: none;
     border-radius: 5px;
@@ -187,10 +184,42 @@ section.visible {
     width: auto;
     height: 2.5rem;
     cursor: pointer;
-    fill: #0074D9; 
+    fill: #000000; 
 }
 
 .image-row img:hover {
     transform: scale(1.2);
     filter: invert(30%) sepia(31%) saturate(4833%) hue-rotate(192deg) brightness(98%) contrast(101%);
+}
+.unlisted-list{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin-left: auto;
+    margin-right: 3rem;
+}
+.unlisted-list li{
+    margin: 0 1rem;
+    cursor:pointer;
+}
+.unlisted-list li.active {
+    color: #0074D9; /* Or any color you prefer */
+    font-weight: bold;
+    text-decoration: underline; /* Adds underline to the active item */
+}
+.unlisted-list li:hover{
+    transform: scale(1.1);
+    color:#0074D9;
+}
+
+.content-to-changes {
+    background-color: #0D1B2A;
+    border-radius: 1rem;
+    padding: 1rem; /* Add padding for better appearance */
+}
+
+.unlisted-list li.active {
+    color: #0074D9; /* Or any color you prefer */
+    font-weight: bold;
+    text-decoration: underline; /* Adds underline to the active item */
 }
