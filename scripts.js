@@ -62,4 +62,40 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    const toolImages = document.querySelectorAll('.design-tools-div img');
+    const devToolsImages = document.querySelectorAll('.development-tools-div img');
+    const devToolsImagesPart2 = document.querySelectorAll('.development-tools-div-part2 img');
+    function addImageHoverEffect(images) {
+        images.forEach(img => {
+            const originalSrc = img.src;
+            const hoverSrc = img.getAttribute('data-hover-src');
+            const tooltipText = img.getAttribute('title');
+    
+            // Wrap the image in a span with the tooltip class
+            const wrapper = document.createElement('span');
+            wrapper.className = 'tooltip';
+            img.parentNode.insertBefore(wrapper, img);
+            wrapper.appendChild(img);
+    
+            // Create the tooltip text element
+            const tooltip = document.createElement('span');
+            tooltip.className = 'tooltiptext';
+            tooltip.innerText = tooltipText;
+            wrapper.appendChild(tooltip);
+    
+            img.addEventListener('mouseover', () => {
+                img.src = hoverSrc;
+            });
+    
+            img.addEventListener('mouseout', () => {
+                img.src = originalSrc;
+            });
+        });
+    }
+    
+    // Apply the hover effect to both sets of images
+    addImageHoverEffect(toolImages);
+    addImageHoverEffect(devToolsImages);
+    addImageHoverEffect(devToolsImagesPart2);
 });

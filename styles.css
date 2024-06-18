@@ -99,6 +99,7 @@ section {
 .about-me-description {
     text-align: justify;
     color:#8290a1;
+    line-height: 1.5;
 }
 
 .about-me-title {
@@ -215,11 +216,104 @@ section {
 .content-to-changes {
     background-color: #0D1B2A;
     border-radius: 1rem;
-    padding: 1rem; /* Add padding for better appearance */
+    padding: 3rem;
+    text-align: left;
+    width: 600px;
+    height: 180px;
+    overflow: auto;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #8290a1 #0D1B2A; /* Firefox */
+
+    /* Webkit (Safari, Chrome) */
+    scrollbar-width:auto;
+    scrollbar-color: #8290a1 #0D1B2A;
+
+    /* Optional: Additional styles for track and thumb */
+}
+
+.content-to-changes::-webkit-scrollbar {
+    width: 10px; /* Width of the entire scrollbar */
+}
+
+.content-to-changes::-webkit-scrollbar-track {
+    background: #0D1B2A; /* Color of the track */
+}
+
+.content-to-changes::-webkit-scrollbar-thumb {
+    background-color: #8290a1; /* Color of the scroll thumb */
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #0D1B2A; /* Border around the thumb */
+}
+
+.content-to-changes::-webkit-scrollbar-thumb:hover {
+    background-color: #607D8B; /* Darker color when hovering over */
+}
+
+.content-to-changes ul{
+    margin-left: 3.5rem;
+    margin-top:0rem;
+}
+.content-to-changes ul li{
+    margin-right: 1rem;
+    color:#8290a1;
+    line-height: 1.5;
 }
 
 .unlisted-list li.active {
     color: #0074D9; /* Or any color you prefer */
     font-weight: bold;
     text-decoration: underline; /* Adds underline to the active item */
+}
+ .hiraya-logo, .NU-logo{
+    width: 4rem; 
+    height: auto;
+    margin-right: 1rem;
+}
+.experience-hiraya, .education-college{
+    line-height: 1.5;
+}
+.development-tools-div-part2, .development-tools-div, .design-tools-div, .nu-fv-div{
+    display: flex; 
+    align-items: center;
+}
+
+.development-tools-div-part2 img, .development-tools-div img, .design-tools-div img{
+    width: 3rem; 
+    height: 3rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: block; /* Ensure images are displayed as block elements */
+    transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+.development-tools-div-part2 img:hover, .development-tools-div img:hover, .design-tools-div img:hover{
+transform: scale(1.2);
+}
+
+/* Custom Tooltip CSS */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #8290a1;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%; /* Position above the image */
+    left: 30%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
