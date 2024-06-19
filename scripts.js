@@ -66,6 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const toolImages = document.querySelectorAll('.design-tools-div img');
     const devToolsImages = document.querySelectorAll('.development-tools-div img');
     const devToolsImagesPart2 = document.querySelectorAll('.development-tools-div-part2 img');
+    const projectManagementToolsImages= document.querySelectorAll('.project-management-tools-div img')
+    const testingToolsImages = document.querySelectorAll('.testing-tools-div img')
     function addImageHoverEffect(images) {
         images.forEach(img => {
             const originalSrc = img.src;
@@ -98,4 +100,86 @@ document.addEventListener('DOMContentLoaded', function() {
     addImageHoverEffect(toolImages);
     addImageHoverEffect(devToolsImages);
     addImageHoverEffect(devToolsImagesPart2);
+    addImageHoverEffect(projectManagementToolsImages);
+    addImageHoverEffect(testingToolsImages);
+
+    const phrases = ["Hi! Welcome to my website", "I'm Aldrin"];
+    let currentPhraseIndex = 0;
+    let currentLetterIndex = 0;
+    const typeSpeed = 100; // Speed of typing
+    const deleteSpeed=30;
+    const delayBetweenPhrases = 1000; // Delay before erasing
+    const delayAfterErasing = 500; // Delay before starting the next phrase
+    
+    const headingElement = document.querySelector('.about-me-subtitle');
+    const cursorElement = document.createElement('span');
+    cursorElement.className = 'typing-cursor';
+    headingElement.appendChild(cursorElement);
+    
+    function typeEffect() {
+        const currentPhrase = phrases[currentPhraseIndex];
+    
+        if (currentLetterIndex < currentPhrase.length) {
+            headingElement.textContent += currentPhrase.charAt(currentLetterIndex);
+            currentLetterIndex++;
+            setTimeout(typeEffect, typeSpeed);
+        } else {
+            if(currentPhraseIndex < phrases.length - 1){
+            setTimeout(eraseEffect, delayBetweenPhrases); // Pause before erasing
+        }
+        }
+    }
+    
+    function eraseEffect() {
+        if (currentLetterIndex > 0) {
+            const currentPhrase = phrases[currentPhraseIndex];
+            headingElement.textContent = currentPhrase.substring(0, currentLetterIndex - 1);
+            currentLetterIndex--;
+            setTimeout(eraseEffect, deleteSpeed);
+        } else {
+            currentPhraseIndex++; // Move to the next phrase
+            if (currentPhraseIndex < phrases.length) {
+                setTimeout(typeEffect, delayAfterErasing); // Pause before typing next phrase
+            }
+        }
+    }
+    
+    // Start the typing animation
+    typeEffect();
+
+    const modal = document.getElementById('modal');
+    const modalImage = document.getElementById('modal-image');
+    const closeBtn = document.querySelector('.close');
+
+    // Get all certifications-item elements
+    const certificationItems = document.querySelectorAll('.certifications-item');
+
+    // Attach click event to each certification item
+    certificationItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+            // Get image source from clicked item
+            const imgSrc = this.querySelector('img').getAttribute('src');
+            modalImage.setAttribute('src', imgSrc);
+
+            // Show modal
+            modal.style.display = 'block';
+        });
+    });
+
+    // Close modal when close button is clicked
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    // Close modal when user clicks outside of the modal content
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    // Prevent modal from closing when user clicks on modal content
+    modal.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
 });

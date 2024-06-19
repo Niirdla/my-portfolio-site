@@ -68,11 +68,7 @@ section {
     color: white; /* Ensure text is readable on dark background */
 }
 
-#about {
-    background: #F3F4F6;
-}
-
-.about-content {
+.certifications-content, .about-content {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,16 +77,16 @@ section {
     padding: 1rem;
 }
 
-.about-text {
+.certifications-text,.about-text {
     flex: 1 1 40%; /* Flex grow, shrink, and basis */
     padding-right: 1rem; /* 1rem = 16px (based on root font size) */
 }
 
-.about-image {
+.certifications-image,.about-image {
     flex: 1 1 40%; /* Flex grow, shrink, and basis */
 }
 
-.about-image img {
+.certifications-image img, .about-image img {
     max-width: 100%;
     height: auto;
     border-radius: 0.5rem; /* 8px -> 0.5rem */
@@ -102,7 +98,7 @@ section {
     line-height: 1.5;
 }
 
-.about-me-title {
+.certifications-title,.about-me-title {
     font-size: 5.5rem; /* Adjust as needed */
     color: transparent;
     -webkit-text-stroke: 1px #8290a1 ; /* Darker primary color */
@@ -110,17 +106,17 @@ section {
     position: relative;
 }
 
-.about-me-title-container {
+.certifications-title-container,.about-me-title-container {
     position: relative;
     display: inline-block;
 }
 
-.about-me-title-container h1 {
+.certifications-title-container h1,.about-me-title-container h1 {
     margin: 0;
     padding: 0;
 }
 
-.about-me-subtitle {
+.certifications-subtitle,.about-me-subtitle {
     font-size: 3rem;
     font-style: Arial, sans-serif;
     position: absolute;
@@ -129,7 +125,21 @@ section {
     transform: translateX(-50%);
     width: 50rem;
     color: #fdfeff; /* Lighter dark color */
+    overflow: hidden; 
 }
+.about-me-subtitle::after {
+    content: '|'; /* Typing cursor */
+    display: inline-block;
+    width: 0.15em;
+    margin-left: 0.1em; /* Adjust as needed */
+    animation: blink-caret 1s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to {opacity: 0; }
+    50% { opacity: 1; }
+}
+
 
 @media (max-width: 48rem) { /* 768px -> 48rem */
     .about-text, .about-image {
@@ -185,7 +195,7 @@ section {
     width: auto;
     height: 2.5rem;
     cursor: pointer;
-    fill: #000000; 
+    transition: transform 0.3s ease; /* Smooth transition for transform */
 }
 
 .image-row img:hover {
@@ -231,26 +241,26 @@ section {
     /* Optional: Additional styles for track and thumb */
 }
 
-.content-to-changes::-webkit-scrollbar {
+body::-webkit-scrollbar, .content-to-changes::-webkit-scrollbar {
     width: 10px; /* Width of the entire scrollbar */
 }
 
-.content-to-changes::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track, .content-to-changes::-webkit-scrollbar-track {
     background: #0D1B2A; /* Color of the track */
 }
 
-.content-to-changes::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb, .content-to-changes::-webkit-scrollbar-thumb {
     background-color: #8290a1; /* Color of the scroll thumb */
     border-radius: 10px; /* Rounded corners */
     border: 2px solid #0D1B2A; /* Border around the thumb */
 }
 
-.content-to-changes::-webkit-scrollbar-thumb:hover {
+body::-webkit-scrollbar-thumb:hover, .content-to-changes::-webkit-scrollbar-thumb:hover {
     background-color: #607D8B; /* Darker color when hovering over */
 }
 
 .content-to-changes ul{
-    margin-left: 3.5rem;
+    margin-left: 4.5rem;
     margin-top:0rem;
 }
 .content-to-changes ul li{
@@ -267,17 +277,20 @@ section {
  .hiraya-logo, .NU-logo{
     width: 4rem; 
     height: auto;
-    margin-right: 1rem;
+    margin-right: 2rem;
 }
 .experience-hiraya, .education-college{
     line-height: 1.5;
 }
+.testing-tools-div, .project-management-tools-div,
 .development-tools-div-part2, .development-tools-div, .design-tools-div, .nu-fv-div{
     display: flex; 
     align-items: center;
 }
 
-.development-tools-div-part2 img, .development-tools-div img, .design-tools-div img{
+
+.testing-tools-div img,.project-management-tools-div img,.development-tools-div-part2 img, 
+.development-tools-div img, .design-tools-div img{
     width: 3rem; 
     height: 3rem;
     margin-right: 1rem;
@@ -286,7 +299,9 @@ section {
     display: block; /* Ensure images are displayed as block elements */
     transition: transform 0.3s ease; /* Smooth transition for transform */
 }
-.development-tools-div-part2 img:hover, .development-tools-div img:hover, .design-tools-div img:hover{
+.testing-tools-div img:hover,.project-management-tools-div img:hover, 
+.development-tools-div-part2 img:hover, .development-tools-div img:hover, 
+.design-tools-div img:hover{
 transform: scale(1.2);
 }
 
@@ -299,7 +314,7 @@ transform: scale(1.2);
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
-    background-color: #8290a1;
+    background-color: #0074D9;
     color: #fff;
     text-align: center;
     border-radius: 5px;
@@ -316,4 +331,91 @@ transform: scale(1.2);
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+}
+.soft-skills-div-part2, .soft-skills-div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    
+}
+.soft-skills-div{
+    margin-top: 1rem;
+}
+.soft-skills-div-part2 span,.soft-skills-div span{
+    margin: 0.5rem 1rem 0.5rem 0;
+    background-color: #0074D9;
+    color:#fff;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+.certifications-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.certifications-item {
+    flex: 1 1 calc(33.333% - 2rem);
+    max-width: calc(33.333% - 2rem);
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #0D1B2A;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin:0.3rem 0.3rem;
+}
+.certifications-item:hover{
+    transform:scale(1.1);
+}
+.certifications-item img {
+    margin-top: 0.5rem;
+    max-width: 95%;
+    height: auto;
+    border-radius: 0.5rem; /* 8px -> 0.5rem */
+    filter: grayscale(80%);
+    transition: filter 0.5s ease;
+    opacity:0.8;
+}
+.certifications-item img:hover{
+    filter:none;
+    opacity:1;
+}
+.certification-title {
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+    color: #8290a1; /* Adjust as needed */
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    overflow: auto;
+}
+
+.modal img {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 80%;
+    margin-top: 5%;
+}
+
+.modal .close {
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
 }
