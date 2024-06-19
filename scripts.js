@@ -68,6 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const devToolsImagesPart2 = document.querySelectorAll('.development-tools-div-part2 img');
     const projectManagementToolsImages= document.querySelectorAll('.project-management-tools-div img')
     const testingToolsImages = document.querySelectorAll('.testing-tools-div img')
+    const aboutMeImages = document.querySelectorAll('.about-me-website-pic')
+    const projectDevToolsImages = document.querySelectorAll('.project-development-tools-div img');
     function addImageHoverEffect(images) {
         images.forEach(img => {
             const originalSrc = img.src;
@@ -95,6 +97,20 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+    function hoverEffectWithoutToolTip(images) {
+        images.forEach(img => {
+            const originalSrc = img.src;
+            const hoverSrc = img.getAttribute('data-hover-src');
+            img.addEventListener('mouseover', () => {
+                img.src = hoverSrc;
+            });
+    
+            img.addEventListener('mouseout', () => {
+                img.src = originalSrc;
+            });
+        });
+    }
+    
     
     // Apply the hover effect to both sets of images
     addImageHoverEffect(toolImages);
@@ -102,6 +118,8 @@ document.addEventListener('DOMContentLoaded', function() {
     addImageHoverEffect(devToolsImagesPart2);
     addImageHoverEffect(projectManagementToolsImages);
     addImageHoverEffect(testingToolsImages);
+    hoverEffectWithoutToolTip(aboutMeImages);
+    addImageHoverEffect(projectDevToolsImages);
 
     const phrases = ["Hi! Welcome to my website", "I'm Aldrin"];
     let currentPhraseIndex = 0;
