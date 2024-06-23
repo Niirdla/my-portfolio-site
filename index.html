@@ -1,236 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aldrin James Mendoza | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="assets/img/am-logo.png" type="image/png">
-    <script src="scripts.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="index-styles.css" />
+    <link rel="icon" href="assets/img/am-logo.png" type="image/png" />
+    <script src="index-scripts.js" defer></script>
+  </head>
+  <body>
     <nav>
-        <img class="am-logo"src="assets/img/am-logo.png" alt="">
-        <ul>
-            <li><a href="#aboutMe">About Me</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#projects">My Projects</a></li>
-            <li><a href="#section3">Connect</a></li>
-        </ul>
+      <img class="am-logo" src="assets/img/am-logo.png" alt="" />
+      <ul>
+        <li><a href="#aboutMeContainer">About Me</a></li>
+        <li><a href="#certificationContainer">Certifications</a></li>
+        <li><a href="#projectContainer">My Projects</a></li>
+        <li><a href="#connectContainer">Connect</a></li>
+      </ul>
     </nav>
+    <div id="aboutMeContainer" class="fade-in-section"></div>
+    <div id="certificationContainer" class="fade-in-section"></div>
+    <div id="projectContainer" class="fade-in-section"></div>
+    <div id="connectContainer" class="fade-in-section"></div>
 
-    <section id="aboutMe">
-        <div class="about-content fade-in-section">
-            <div class="about-text">
-                
-                <div class="about-me-title-container">
-                    <h1 class="about-me-title">ABOUT ME</h1>
-                    <h1 class="about-me-subtitle"></h1>
-                </div>
-
-                <p class="about-me-description">Aspiring programmer with a passion in problem-solving. 
-                Completed 1114 hours of internship experience, primarily focused on web development, 
-                and eager to learn and expand my skills. Quick learner with a keen interest 
-                in tackling new challenges and mastering new technologies.</p>
-
-               <ul class="unlisted-list">
-                <li class="active" data-section="skills">SKILLS</li>
-                <li data-section="experience">EXPERIENCE</li>
-                <li data-section="education">EDUCATION</li>
-               </ul>
-
-               <div id="skills" class="content-to-changes">
-                <strong>Design Tools</strong>
-                <div class="design-tools-div">
-                    <img src="assets/img/design-tools-images/canva-logo-gray.svg" data-hover-src="assets/img/design-tools-images/canva-logo.svg" title="Canva" alt="">
-                    <img src="assets/img/design-tools-images/figma-logo-gray.svg" data-hover-src="assets/img/design-tools-images/figma-logo.svg" title="Figma" alt="">
-                    <img src="assets/img/design-tools-images/adobe-xd-logo-gray.svg" data-hover-src="assets/img/design-tools-images/adobe-xd-logo.svg" title="Adobe XD" alt="">
-                </div>
-                <strong>Development Tools</strong>
-                <div class="development-tools-div">
-                    <img src="assets/img/developer-tools-images/html5-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/html5-logo.svg" title="HTML 5" alt="">
-                    <img src="assets/img/developer-tools-images/css-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/css-logo.svg" title="CSS 3" alt="">
-                    <img src="assets/img/developer-tools-images/js-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/js-logo.svg" title="JavaScript" alt="">
-                    <img src="assets/img/developer-tools-images/ts-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/ts-logo.svg" title="Typescript" alt="">
-                    <img src="assets/img/developer-tools-images/node-js-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/node-js-logo.svg" title="Node.js" alt="">
-                    <img src="assets/img/developer-tools-images/react-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/react-logo.svg" title="React" alt="">
-                    <img src="assets/img/developer-tools-images/angular-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/angular-logo.svg" title="Angular" alt="">
-                    <img src="assets/img/developer-tools-images/python-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/python-logo.svg" title="Python" alt="">
-                    <img src="assets/img/developer-tools-images/django-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/django-logo.svg" title="Python Django" alt="">
-                    <img src="assets/img/developer-tools-images/php-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/php-logo.svg" title="PHP" alt="">
-                    <img src="assets/img/developer-tools-images/c++-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/c++-logo.svg" title="C++" alt="">
-                    <img src="assets/img/developer-tools-images/java-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/java-logo.svg" title="Java" alt="">
-                    <img src="assets/img/developer-tools-images/postgresql-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/postgresql-logo.svg" title="PostgreSQL" alt="">
-                    <img src="assets/img/developer-tools-images/mssql-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/mssql-logo.svg" title="Microsoft SQL" alt="">
-                    <img src="assets/img/developer-tools-images/mysql-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/mysql-logo.svg" title="MySQL" alt="">
-                    <img src="assets/img/developer-tools-images/sap-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/sap-logo.svg" title="SAP" alt="">
-                    <img src="assets/img/developer-tools-images/salesforce-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/salesforce-logo.svg" title="Salesforce" alt="">
-                    <img src="assets/img/developer-tools-images/github-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/github-logo.svg" title="GitHub" alt="">
-                </div>
-                <strong>Project Management Tools</strong>
-                <div class="project-management-tools-div">
-                    <img src="assets/img/project-management-tools-images/trello-logo-gray.svg" data-hover-src="assets/img/project-management-tools-images/trello-logo.svg" title="Trello" alt="">
-                    <img src="assets/img/project-management-tools-images/jira-logo-gray.svg" data-hover-src="assets/img/project-management-tools-images/jira-logo.svg" title="Jira" alt="">
-                    <img src="assets/img/project-management-tools-images/notion-logo-gray.svg" data-hover-src="assets/img/project-management-tools-images/notion-logo.svg" title="Notion" alt="">
-                </div>
-                <strong>Testing Tools</strong>
-                <div class="testing-tools-div">
-                    <img src="assets/img/testing-tools-images/selenium-logo-gray.svg" data-hover-src="assets/img/testing-tools-images/selenium-logo.svg" title="Selenium" alt="">
-                    <img src="assets/img/testing-tools-images/postman-logo-gray.svg" data-hover-src="assets/img/testing-tools-images/postman-logo.svg" title="Postman" alt="">
-                </div>
-                <div class="soft-skills-div">
-                    <span>Problem Solver</span>
-                    <span>Teamwork</span>
-                    <span>Adaptability</span>
-                    <span>Creativity</span>
-                    <span>Flexibility</span>
-            
-                </div>
-                <div class="soft-skills-div-part2">
-                    <span>Time Management</span>
-                    <span>Patient</span>
-                    <span>Attention to detail</span>
-                </div>
-            </div>
-
-            <div id="experience" class="content-to-changes" style="display: none;">
-                <div class="nu-fv-div">
-                    <img src="assets/img/hiraya-tech.svg" alt="National University Fairview" class="hiraya-logo">
-                    <strong class="experience-hiraya">Full-Stack Developer Intern | Hiraya Technology Solutions Inc. 
-                        <br> Nov 2023 - Jun 2024 8 mos</strong>
-                    </div>
-      
-                <ul>
-                    <li>Implement the design on frontend from figma and handle backend API's</li>
-                </ul>
-            </div>
-
-            <div id="education" class="content-to-changes" style="display: none;">
-                <div class="nu-fv-div">
-                <img src="assets/img/nu_logo.svg" alt="National University Fairview" class="NU-logo">
-                <strong class="education-college">National University Fairview | BS Information Technology major in Mobile and Internet Technologies<br>
-                 Aug 2020 - Expected Aug 2024</strong>
-                </div>
-                <ul>
-                   <li>Consistent Dean Lister(2020-2024)</li>
-                    <li>Developed websites for capstone projects titled 'Fishyfy' and 'Tri-bin.' 
-                        The 'Tri-bin' system received the 'Best Web App' award at the NUFV IoT Symposium 2023.</li>
-                </ul> 
-            </div>
-                <div class="image-row">
-                    <button class="btn">Connect</button>
-                    <a href="https://github.com/Niirdla" target="_blank"><img src="assets/img/developer-tools-images/github-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/github-logo.svg" title="GitHub" alt=""></a>
-                    <a href="https://www.linkedin.com/in/aldrin-james-mendoza-8a40002a0/" target="_blank"><img src="assets/img/linkedin-logo.svg" alt="LinkedIn logo"></a>
-                </div>
-            </div>
-            <div class="about-image">
-                <img src="assets/img/myPicture.png" alt="Your Image">
-            </div>
-        </div>
-    </section>
-    <section id="certifications">
-        <div class="certifications-content fade-in-section">
-            <div class="certifications-text">
-                <div class="certifications-title-container">
-                    <h1 class="certifications-title">CERTIFICATIONS</h1>
-                    <h1 class="certifications-subtitle">Credential highlights</h1>
-                </div>
-            </div>
-            <div class="certifications-images">
-                <div class="certifications-item">
-                    <img src="assets/img/certifications/az-900.PNG" alt="AZ:900">
-                    <p class="certification-title">AZ900: Microsoft Azure Fundamentals</p>
-                </div>
-                <div class="certifications-item">
-                    <img src="assets/img/certifications/upou-graphic-design.PNG" alt="">
-                    <p class="certification-title">UPOU: Principles of Graphic Design</p>
-                </div>
-                <div class="certifications-item">
-                    <img src="assets/img/certifications/sfpc.PNG" alt="">
-                    <p class="certification-title">Scrum Foundation Professional Certificate</p>
-                </div>
-                <div class="certifications-item">
-                    <img src="assets/img/certifications/ubpx-agile.PNG" alt="">
-                    <p class="certification-title">UBPXcellerator - Agile Program</p>
-                </div>
-                <div class="certifications-item">
-                    <img src="assets/img/certifications/ubpx-design.PNG" alt="">
-                    <p class="certification-title">UBPXcellerator - Design Thinking Program</p>
-                </div>
-                <div class="certifications-item">
-                    <img src="assets/img/certifications/ibm-edtp.PNG" alt="">
-                    <p class="certification-title">IBM - Enterprise Design Thinking Practitioner</p>
-                </div>
-                <div class="certifications-item">
-                    <img src="assets/img/certifications/ln-sdlc.PNG" alt="">
-                    <p class="certification-title">LinkedIn - Software Development Life Cycle</p>
-                </div>
-                <div class="certifications-item">
-                    <img src="assets/img/certifications/ln-af.PNG" alt="">
-                    <p class="certification-title">LinkedIn - Agile Foundations</p>
-                </div>
-            </div>
-        </div>
-    </section>
     <div id="modal" class="modal">
-        <span class="close">&times;</span>
-        <img id="modal-image" src="" alt="Certificate">
+      <span class="close">&times;</span>
+      <img id="modal-image" src="" alt="Certificate" />
+      <p id="cert-modal-index" class="cert-modal-index"></p>
     </div>
-    <section id="projects">
-        <div class="projects-content fade-in-section">
-            <div class="projects-text">
-                <div class="projects-title-container">
-                    <h1 class="projects-title">MY PROJECTS</h1>
-                    <h1 class="projects-subtitle">Highlight projects</h1>
-                </div>
-            </div>
-            <div class="projects-images">
-                <div class="projects-item">
-                    <img src="assets/img/projects/fishyfy/fishyfy.png" alt="FISHYFY">
-                    <p class="project-title">Fishyfy</p>
-                    <p class="project-development-title">Development tools:</p>
-                    <div class="project-development-tools-div">
-                        <img src="assets/img/developer-tools-images/html5-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/html5-logo.svg" title="HTML 5" alt="">
-                        <img src="assets/img/developer-tools-images/css-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/css-logo.svg" title="CSS 3" alt="">
-                        <img src="assets/img/developer-tools-images/js-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/js-logo.svg" title="JavaScript" alt="">
-                        <img src="assets/img/developer-tools-images/php-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/php-logo.svg" title="PHP" alt="">
-                    </div>
-                    <a class="github-button" href="https://github.com/Niirdla/fishyfy" target="_blank">
-                        <img src="assets/img/developer-tools-images/github-logo-wo-rect.svg" alt="GitHub Logo" class="github-logo">
-                        <span>View on GitHub</span>
-                    </a>
-                </div>
-                <div class="projects-item">
-                    <img src="assets/img/projects/tribin/tribin.png" alt="TRIBIN">
-                    <p class="project-title">Tri-bin</p>
-                    <p class="project-development-title">Development tools:</p>
-                    <div class="project-development-tools-div">
-                        <img src="assets/img/developer-tools-images/html5-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/html5-logo.svg" title="HTML 5" alt="">
-                        <img src="assets/img/developer-tools-images/css-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/css-logo.svg" title="CSS 3" alt="">
-                        <img src="assets/img/developer-tools-images/js-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/js-logo.svg" title="JavaScript" alt="">
-                        <img src="assets/img/developer-tools-images/php-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/php-logo.svg" title="PHP" alt="">
-                    </div>
-                    <a class="github-button" href="https://github.com/Niirdla/tribin" target="_blank">
-                        <img src="assets/img/developer-tools-images/github-logo-wo-rect.svg" alt="GitHub Logo" class="github-logo">
-                        <span>View on GitHub</span>
-                    </a>
-                </div>
-                <div class="projects-item">
-                    <img class="about-me-website-pic" src="assets/img/projects/about-me/about-me.png" data-hover-src="assets/img/projects/about-me/about-me-part2.png" alt="TRIBIN">
-                    <p class="project-title">My portfolio website</p>
-                    <p class="project-development-title">Development tools:</p>
-                    <div class="project-development-tools-div">
-                        <img src="assets/img/developer-tools-images/html5-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/html5-logo.svg" title="HTML 5" alt="">
-                        <img src="assets/img/developer-tools-images/css-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/css-logo.svg" title="CSS 3" alt="">
-                        <img src="assets/img/developer-tools-images/js-logo-gray.svg" data-hover-src="assets/img/developer-tools-images/js-logo.svg" title="JavaScript" alt="">
-                    </div>
-                    <a class="github-button" href="https://github.com/Niirdla/my-portfolio-site" target="_blank">
-                        <img src="assets/img/developer-tools-images/github-logo-wo-rect.svg" alt="GitHub Logo" class="github-logo">
-                        <span>View on GitHub</span>
-                    </a>
-                </div>
-            </div>
+    <span class="arrow-external cert-modal-left-arrow-external">&lt;</span>
+    <span class="arrow-external cert-modal-right-arrow-external">&gt;</span>
+    <div id="project-modal" class="project-modal">
+      <span class="project-modal-close">&times;</span>
+      <div class="project-modal-content">
+        <p id="pm-title" class="pm-title"></p>
+        <div class="pm-image-vid-div">
+          <span class="arrow left-arrow">&lt;</span>
+          <video id="project-modal-video" controls preload="metadata"></video>
+          <img id="project-modal-image" src="" alt="Project Image" />
+          <span class="arrow right-arrow">&gt;</span>
         </div>
-    </section>
-</body>
+        <p id="project-modal-index" class="project-modal-index"></p>
+        <p id="project-modal-image-title" class="project-modal-image-title"></p>
+        <p class="project-development-title-modal">Development tools</p>
+        <div
+          id="project-development-tools"
+          class="project-development-tools"
+        ></div>
+        <p id="project-description" class="project-description"></p>
+        <p class="key-features-title-modal">Project Key Features:</p>
+        <div class="key-features-container">
+          <ul id="key-features-list" class="key-features-list"></ul>
+        </div>
+        <a id="git-button" class="git-button" target="_blank"></a>
+      </div>
+    </div>
+    <span class="arrow-external left-arrow-external">&lt;</span>
+    <span class="arrow-external right-arrow-external">&gt;</span>
+  </body>
 </html>

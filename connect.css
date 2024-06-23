@@ -1,0 +1,290 @@
+:root {
+  font-size: 16px; /* Base font size */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #1b263b;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 0;
+  background: #f4f4f4;
+}
+.connect-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Added to handle smaller screens */
+  text-align: center; /* Center text */
+  padding: 2rem;
+  width: 75rem;
+  transform: translateY(1.25rem); /* Changed to rem */
+  color: white; /* Ensure text is readable on dark background */
+  margin: 0 auto; /* Center the content */
+}
+
+.connect-text {
+  flex: 1 1 40%; /* Flex grow, shrink, and basis */
+  padding-right: 1rem; /* 1rem = 16px (based on root font size) */
+}
+
+.connect-image {
+  flex: 1 1 40%; /* Flex grow, shrink, and basis */
+}
+
+.connect-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem; /* 8px -> 0.5rem */
+}
+
+.connect-description {
+  text-align: justify;
+  color: #8290a1;
+  line-height: 1.5;
+}
+
+.connect-title {
+  font-size: 5.5rem; /* Adjust as needed */
+  color: transparent;
+  -webkit-text-stroke: 1px #8290a1; /* Darker primary color */
+  text-align: center; /* Optional: Center align text */
+  position: relative;
+}
+
+.connect-title-container {
+  position: relative;
+  display: inline-block;
+}
+
+.connect-title-container h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.connect-subtitle {
+  font-size: 3rem;
+  font-style: Arial, sans-serif;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50rem;
+  color: #fdfeff; /* Lighter dark color */
+  overflow: hidden;
+}
+
+.dl-resume {
+  padding: 12px 24px;
+  background-color: #0d1b2a; /* Adjusted to a darker blue for better visibility */
+  color: #fdfeff; /* Lighter dark color for better contrast */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 15rem;
+  text-decoration: none;
+  margin: 2rem;
+}
+
+.dl-resume:hover {
+  transform: scale(1.1);
+  background-color: #005bb5; /* Darker primary color for hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.location-div,
+.email-div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.location-div img,
+.email-div img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: block; /* Ensure images are displayed as block elements */
+  transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+.location-div img:hover,
+.email-div img:hover {
+  transform: scale(1.2);
+}
+.socials {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  gap: 10px; /* Add space between items */
+  margin-top: 20px;
+  transition: transform 0.3s ease;
+  justify-content: center;
+}
+
+.socials img {
+  width: auto;
+  height: 2.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+.socials img:hover {
+  transform: scale(1.2);
+  filter: invert(30%) sepia(31%) saturate(4833%) hue-rotate(192deg)
+    brightness(98%) contrast(101%);
+}
+.connect-msg-div {
+  background-color: #0d1b2a;
+  border-radius: 1rem;
+  padding: 3rem 3rem 5rem 3rem;
+  text-align: left;
+  width: 600px;
+  height: 180px;
+  margin-top: 1rem;
+}
+
+.email-div p,
+.location-div p,
+.ty-msg {
+  line-height: 2rem;
+  font-size: 1.25rem;
+  margin: 0.1rem;
+  color: #8290a1;
+}
+.or-visit-ts {
+  margin: 1.25rem;
+}
+.wtkm {
+  font-size: 2.5rem;
+}
+.footer {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+@media (max-width: 48rem) {
+  /* For screens less than or equal to 768px */
+  .connect-content {
+    padding: 1rem;
+    width: 100%; /* Ensure it doesn't exceed the screen width */
+  }
+
+  .connect-text,
+  .connect-image {
+    flex: 1 1 100%; /* Full width on small screens */
+    padding-right: 0;
+  }
+
+  .connect-title {
+    font-size: 3rem; /* Adjust font size */
+  }
+
+  .connect-subtitle {
+    font-size: 1.5rem; /* Adjust subtitle font size */
+    width: 100%;
+  }
+
+  .connect-image {
+    order: initial; /* Move image above text on smaller screens */
+    margin-top: 1rem; /* Add space above image */
+  }
+
+  .location-div img,
+  .email-div img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .dl-resume {
+    width: 100%;
+    font-size: 1rem; /* Adjust font size */
+    padding: 10px 20px;
+    margin: 1rem 0;
+  }
+
+  .connect-msg-div {
+    width: 90%; /* Adjust width */
+    height: auto; /* Adjust height */
+    padding: 2rem; /* Adjust padding */
+    margin: 1rem auto; /* Center the element */
+  }
+
+  .email-div p,
+  .location-div p,
+  .ty-msg {
+    font-size: 1rem; /* Adjust font size */
+    line-height: 1.5rem; /* Adjust line height */
+  }
+
+  .socials img {
+    height: 2rem; /* Adjust height */
+  }
+
+  .wtkm {
+    font-size: 2rem; /* Adjust font size */
+  }
+
+  .footer {
+    font-size: 1rem; /* Adjust font size */
+  }
+}
+
+@media (max-width: 30rem) {
+  /* For screens less than or equal to 480px */
+  .connect-title {
+    font-size: 2rem; /* Further adjust font size */
+  }
+
+  .connect-subtitle {
+    font-size: 1.25rem; /* Further adjust subtitle font size */
+  }
+
+  .dl-resume {
+    width: 100%; /* Full width */
+    font-size: 0.875rem; /* Adjust font size */
+    padding: 8px 16px; /* Adjust padding */
+  }
+
+  .connect-msg-div {
+    width: 95%; /* Adjust width */
+    height: auto; /* Adjust height */
+    padding: 1.5rem; /* Adjust padding */
+  }
+
+  .location-div img,
+  .email-div img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .email-div p,
+  .location-div p,
+  .ty-msg {
+    font-size: 0.875rem; /* Adjust font size */
+    line-height: 1.25rem; /* Adjust line height */
+  }
+
+  .socials img {
+    height: 1.5rem; /* Adjust height */
+  }
+
+  .wtkm {
+    font-size: 1.5rem; /* Adjust font size */
+  }
+
+  .footer {
+    font-size: 0.875rem; /* Adjust font size */
+  }
+}
