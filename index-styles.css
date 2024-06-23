@@ -152,7 +152,8 @@ body::-webkit-scrollbar-thumb:hover,
   z-index: 2; /* Ensure arrows are above the video/image */
 }
 
-.arrow-external {
+.arrow-external-cert,
+.arrow-external-proj {
   font-size: 6.25rem;
 }
 
@@ -200,6 +201,9 @@ body::-webkit-scrollbar-thumb:hover,
   .arrow-external.right-arrow {
     right: 2rem;
   }
+  .modal img {
+    margin-top: 50%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -213,5 +217,9 @@ body::-webkit-scrollbar-thumb:hover,
 
   .arrow-external.right-arrow {
     right: 1rem;
+  }
+  .cert-modal-left-arrow-external,
+  .cert-modal-right-arrow-external {
+    margin-top: 40%;
   }
 }

@@ -102,7 +102,7 @@ section {
   white-space: normal; /* Allow text to wrap */
   margin: 0 auto; /* Center align on smaller screens */
 
-  color: #607d8b;
+  color: #8290a1;
   text-align: justify;
   line-height: 1.5rem;
   text-indent: 3rem;
@@ -383,7 +383,7 @@ section {
 
   .exp-logo,
   .educ-logo {
-    margin-right: 0; /* Remove margin on smaller screens */
+    margin-right: 1rem; /* Remove margin on smaller screens */
   }
 
   .exp-cell,
@@ -475,6 +475,7 @@ section {
     margin-right: 0.5rem; /* Adjust margin for smaller screens */
     margin-top: 0.5rem; /* Adjust margin for smaller screens */
     margin-bottom: 0.5rem; /* Adjust margin for smaller screens */
+    margin-left: 1rem;
   }
 
   .about-me-title-container {
@@ -499,5 +500,6 @@ section {
 
   .content-to-changes {
     padding: 1rem; /* Further adjust padding */
+    width: 90%;
   }
 }
