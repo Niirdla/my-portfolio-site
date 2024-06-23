@@ -195,6 +195,10 @@ const projects = {
         type: "image",
         src: "assets/img/projects/tribin/web/admin-edit-user.PNG",
       },
+      {
+        type: "image",
+        src: "assets/img/projects/tribin/web/80-percent.PNG",
+      },
     ],
     imageTitles: [
       "Tri-bin",
@@ -205,6 +209,7 @@ const projects = {
       "Dashboard",
       "Admin: Add User",
       "Admin: Edit User",
+      "80% Display",
     ],
     description: `Tri-bin aims to create a cleaner and healthier environment for students, 
     professors, and staff at National University Fairview. 
