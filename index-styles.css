@@ -1,0 +1,217 @@
+:root {
+  font-size: 16px; /* Base font size */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #1b263b;
+  overflow: auto;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 0;
+  background: #f4f4f4;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+  transition: background 0.3s ease-in-out;
+  z-index: 1000;
+  padding: 0.5rem 1rem; /* Combined padding */
+  display: flex;
+  align-items: center; /* Ensure vertical alignment of items */
+}
+
+.am-logo {
+  height: 4rem; /* Set a fixed height for the logo */
+  width: auto; /* Maintain the aspect ratio */
+  margin-left: 2rem; /* Space between the logo and the left edge */
+}
+
+nav.scrolled {
+  background: #0d1b2a; /* Darker primary color */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center; /* Ensure vertical alignment of list items */
+  padding: 0;
+  margin-left: auto;
+  margin-right: 3rem;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem; /* This remains fixed for readability */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block; /* Ensure the transform and box-shadow apply correctly */
+}
+
+nav ul li a:hover {
+  transform: scale(1.1); /* Scale up the a */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for a 3D effect */
+  color: #0074d9;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body::-webkit-scrollbar,
+.project-modal::-webkit-scrollbar {
+  width: 10px; /* Width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track,
+.project-modal::-webkit-scrollbar-track {
+  background: #0d1b2a; /* Color of the track */
+}
+
+body::-webkit-scrollbar-thumb,
+.project-modal::-webkit-scrollbar-thumb {
+  background-color: #8290a1; /* Color of the scroll thumb */
+  border-radius: 10px; /* Rounded corners */
+  border: 2px solid #0d1b2a; /* Border around the thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover,
+.project-modal::-webkit-scrollbar-thumb:hover {
+  background-color: #607d8b; /* Darker color when hovering over */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+}
+
+.modal img {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80%;
+  margin-top: 5%;
+}
+
+.modal .close {
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  transition: transform 0.3 ease;
+}
+.close:hover {
+  transform: scale(1.1);
+  color: red;
+}
+.arrow-external {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3.125rem;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+.arrow {
+  position: absolute;
+  font-size: 3rem; /* Adjust arrow size as needed */
+  color: white;
+  cursor: pointer;
+  z-index: 2; /* Ensure arrows are above the video/image */
+}
+
+.arrow-external {
+  font-size: 6.25rem;
+}
+
+.arrow-external:hover {
+  transform: translateY(-50%) scale(1.2);
+  background-color: #ffffff4d;
+}
+.arrow:hover {
+  transform: scale(1.2);
+  background-color: #ffffff4d;
+}
+
+.cert-modal-left-arrow-external,
+.cert-modal-right-arrow-external {
+  display: none;
+  font-size: 10rem;
+}
+.cert-modal-left-arrow-external {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 3rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1000;
+}
+.cert-modal-right-arrow-external {
+  display: none;
+  position: fixed;
+  top: 50%;
+  right: 3rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1000;
+}
+@media (max-width: 768px) {
+  .arrow-external {
+    font-size: 4rem;
+  }
+
+  .arrow-external.left-arrow {
+    left: 2rem;
+  }
+
+  .arrow-external.right-arrow {
+    right: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .arrow-external {
+    font-size: 3rem;
+  }
+
+  .arrow-external.left-arrow {
+    left: 1rem;
+  }
+
+  .arrow-external.right-arrow {
+    right: 1rem;
+  }
+}

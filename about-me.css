@@ -1,0 +1,503 @@
+:root {
+  font-size: 16px; /* Base font size */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #1b263b;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 0; /* Adjusted */
+  background: #f4f4f4;
+}
+
+section {
+  padding: 2rem;
+  transform: translateY(1.25rem); /* Changed to rem */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  background: #1b263b; /* Light dark background color */
+  color: white; /* Ensure text is readable on dark background */
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Added for smaller screens */
+  text-align: center; /* Center text */
+  padding: 2rem;
+  width: 75rem;
+  transform: translateY(1.25rem); /* Changed to rem */
+  color: white; /* Ensure text is readable on dark background */
+  margin: 0 auto; /* Center the content */
+}
+
+.about-text {
+  flex: 1 1 40%; /* Flex grow, shrink, and basis */
+  padding-right: 1rem; /* Changed to rem */
+  max-width: 100%; /* Limit maximum width */
+}
+
+.about-image {
+  flex: 1 1 40%; /* Flex grow, shrink, and basis */
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem; /* Changed to rem */
+}
+
+.about-me-title {
+  font-size: 5.5rem; /* Adjusted as needed */
+  color: transparent;
+  -webkit-text-stroke: 1px #8290a1; /* Darker primary color */
+  text-align: center; /* Optional: Center align text */
+  position: relative;
+  max-width: 100%; /* Limit maximum width */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Show ellipsis (...) when text overflows */
+}
+.about-me-title-container {
+  position: relative;
+  display: inline-block;
+  width: 100%; /* Occupy full width */
+  max-width: 100%; /* Limit maximum width */
+}
+
+.about-me-title-container h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.about-me-subtitle {
+  font-size: 3rem;
+  font-style: Arial, sans-serif;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 100%; /* Limit maximum width */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Show ellipsis (...) when text overflows */
+  color: #fdfeff; /* Lighter dark color */
+}
+.about-me-subtitle::after {
+  content: "|"; /* Typing cursor */
+  display: inline-block;
+  width: 0.15em;
+  margin-left: 0.1em; /* Adjust as needed */
+  animation: blink-caret 1s step-end infinite;
+}
+
+.about-me-description {
+  max-width: 100%; /* Limit maximum width */
+  white-space: normal; /* Allow text to wrap */
+  margin: 0 auto; /* Center align on smaller screens */
+
+  color: #607d8b;
+  text-align: justify;
+  line-height: 1.5rem;
+  text-indent: 3rem;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn {
+  padding: 1rem 2rem; /* Changed to rem */
+  background-color: #0d1b2a; /* Adjusted to a darker blue for better visibility */
+  color: #fdfeff; /* Lighter dark color for better contrast */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem; /* Changed to rem */
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 15rem; /* Changed to rem */
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background-color: #005bb5; /* Darker primary color for hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.image-row {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  gap: 10px; /* Add space between items */
+  margin-top: 20px;
+  transition: transform 0.3s ease;
+}
+
+.image-row img {
+  width: auto;
+  height: 2.5rem; /* Changed to rem */
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+.image-row img:hover {
+  transform: scale(1.2);
+  filter: invert(30%) sepia(31%) saturate(4833%) hue-rotate(192deg)
+    brightness(98%) contrast(101%);
+}
+
+.unlisted-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin-left: auto;
+  margin-right: 3rem;
+  color: #8290a1;
+}
+
+.unlisted-list li {
+  margin: 0 1rem; /* Changed to rem */
+  cursor: pointer;
+}
+
+.unlisted-list li.active {
+  color: #0074d9; /* Or any color you prefer */
+  font-weight: bold;
+  text-decoration: underline; /* Adds underline to the active item */
+}
+
+.unlisted-list li:hover {
+  transform: scale(1.1);
+  color: #0074d9;
+}
+
+.content-to-changes {
+  background-color: #0d1b2a;
+  border-radius: 1rem; /* Changed to rem */
+  padding: 3rem; /* Changed to rem */
+  text-align: left;
+  width: 37.5rem; /* Consider changing to rem for better responsiveness */
+  height: 11.25rem;
+  overflow: auto;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #8290a1 #0d1b2a; /* Firefox */
+
+  /* Webkit (Safari, Chrome) */
+  scrollbar-width: auto;
+  scrollbar-color: #8290a1 #0d1b2a;
+
+  /* Optional: Additional styles for track and thumb */
+}
+
+.content-to-changes::-webkit-scrollbar {
+  width: 10px; /* Width of the entire scrollbar */
+}
+
+.content-to-changes::-webkit-scrollbar-track {
+  background: #0d1b2a; /* Color of the track */
+}
+
+.content-to-changes::-webkit-scrollbar-thumb {
+  background-color: #8290a1; /* Color of the scroll thumb */
+  border-radius: 10px; /* Rounded corners */
+  border: 2px solid #0d1b2a; /* Border around the thumb */
+}
+
+.content-to-changes::-webkit-scrollbar-thumb:hover {
+  background-color: #607d8b; /* Darker color when hovering over */
+}
+
+.content-to-changes ul li {
+  margin-right: 1rem; /* Changed to rem */
+  color: #8290a1;
+  line-height: 1.5;
+}
+
+.exp-logo,
+.educ-logo {
+  width: 4rem; /* Changed to rem */
+  height: auto;
+  margin-right: 1rem; /* Changed to rem */
+}
+
+.experience-hiraya,
+.education-college {
+  line-height: 1.5;
+}
+
+.testing-tools-div,
+.project-management-tools-div,
+.development-tools-div,
+.design-tools-div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.exp-div,
+.educ-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-cell,
+.educ-cell {
+  padding: 0.5rem; /* Changed to rem */
+}
+
+.exp-row,
+.educ-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.testing-tools-div img,
+.project-management-tools-div img,
+.development-tools-div-part2 img,
+.development-tools-div img,
+.design-tools-div img {
+  width: 3rem; /* Changed to rem */
+  height: 3rem; /* Changed to rem */
+  margin-right: 1rem; /* Changed to rem */
+  margin-top: 1rem; /* Changed to rem */
+  margin-bottom: 1rem; /* Changed to rem */
+  display: block; /* Ensure images are displayed as block elements */
+  transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+.testing-tools-div img:hover,
+.project-management-tools-div img:hover,
+.development-tools-div-part2 img:hover,
+.development-tools-div img:hover,
+.design-tools-div img:hover {
+  transform: scale(1.2);
+}
+
+/* Custom Tooltip CSS */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #0074d9;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%; /* Position above the image */
+  left: 30%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.soft-skills-div-part2,
+.soft-skills-div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.soft-skills-div {
+  margin-top: 1rem;
+}
+
+.soft-skills-div-part2 span,
+.soft-skills-div span {
+  margin: 0.5rem 1rem 0.5rem 0;
+  background-color: #0074d9;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+@media (max-width: 48rem) {
+  /* Adjust padding and sizes for smaller screens */
+  .about-text {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .about-me-title {
+    font-size: 3.5rem; /* Reduce font size on smaller screens */
+  }
+
+  .about-me-subtitle {
+    font-size: 2rem; /* Adjust subtitle font size */
+  }
+
+  .about-image {
+    order: -1; /* Move image above text on smaller screens */
+    margin-top: 1rem; /* Add space above image */
+  }
+
+  .content-to-changes {
+    width: 100%; /* Make the content box full width on smaller screens */
+    max-width: 100%; /* Ensure it doesn't exceed the screen width */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 2rem; /* Adjust padding for smaller screens */
+  }
+
+  .btn {
+    width: 100%; /* Full width button on smaller screens */
+  }
+
+  .unlisted-list {
+    margin-right: 0; /* Remove right margin on smaller screens */
+  }
+
+  .exp-logo,
+  .educ-logo {
+    margin-right: 0; /* Remove margin on smaller screens */
+  }
+
+  .exp-cell,
+  .educ-cell {
+    padding: 0.3rem; /* Adjust padding for smaller screens */
+  }
+
+  .testing-tools-div img,
+  .project-management-tools-div img,
+  .development-tools-div-part2 img,
+  .development-tools-div img,
+  .design-tools-div img {
+    margin-right: 0.5rem; /* Adjust margin for smaller screens */
+    margin-top: 0.5rem; /* Adjust margin for smaller screens */
+    margin-bottom: 0.5rem; /* Adjust margin for smaller screens */
+  }
+}
+@media (max-width: 48rem) {
+  /* For screens less than or equal to 768px */
+  .about-content {
+    padding: 1rem;
+    width: 100%; /* Ensure it doesn't exceed the screen width */
+  }
+
+  .about-text,
+  .about-image {
+    flex: 1 1 100%; /* Full width on small screens */
+    padding-right: 0;
+    width: 80%;
+  }
+
+  .about-me-title {
+    font-size: 3rem; /* Adjust font size */
+  }
+
+  .about-me-subtitle {
+    font-size: 1.5rem; /* Adjust subtitle font size */
+  }
+
+  .about-image {
+    order: -1; /* Move image above text on smaller screens */
+    margin-top: 1rem; /* Add space above image */
+  }
+  .about-image img {
+    width: 75%;
+  }
+
+  .about-me-description {
+    font-size: 1rem; /* Adjust font size */
+    text-indent: 1.5rem;
+  }
+
+  .content-to-changes {
+    width: 100%; /* Full width on smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 1.5rem; /* Adjust padding */
+  }
+
+  .btn {
+    width: 100%; /* Full width button on smaller screens */
+  }
+
+  .unlisted-list {
+    margin-right: 0; /* Remove right margin on smaller screens */
+    justify-content: center;
+  }
+
+  .unlisted-list li {
+    margin: 0 0.5rem; /* Adjust margin for smaller screens */
+  }
+
+  .exp-logo,
+  .educ-logo {
+    margin-right: 0; /* Remove margin on smaller screens */
+  }
+
+  .exp-cell,
+  .educ-cell {
+    padding: 0.3rem; /* Adjust padding for smaller screens */
+  }
+
+  .testing-tools-div img,
+  .project-management-tools-div img,
+  .development-tools-div-part2 img,
+  .development-tools-div img,
+  .design-tools-div img {
+    width: 2rem; /* Adjust size */
+    height: 2rem; /* Adjust size */
+    margin-right: 0.5rem; /* Adjust margin for smaller screens */
+    margin-top: 0.5rem; /* Adjust margin for smaller screens */
+    margin-bottom: 0.5rem; /* Adjust margin for smaller screens */
+  }
+
+  .about-me-title-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 30rem) {
+  /* For screens less than or equal to 480px */
+  .about-me-title {
+    font-size: 2rem; /* Further adjust font size */
+  }
+
+  .about-me-subtitle {
+    font-size: 1.25rem; /* Further adjust subtitle font size */
+  }
+
+  .about-me-description {
+    font-size: 0.875rem; /* Further adjust font size */
+    text-indent: 1rem;
+  }
+
+  .content-to-changes {
+    padding: 1rem; /* Further adjust padding */
+  }
+}
