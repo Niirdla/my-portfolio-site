@@ -1,5 +1,10 @@
-// Updated scripts.js
 document.addEventListener("DOMContentLoaded", function () {
+  // Create overlay element
+  const overlay = document.createElement("div");
+  overlay.className = "overlay";
+  overlay.innerHTML = '<div class="loading-screen">Loading...</div>';
+  document.body.appendChild(overlay);
+
   function renderHTML(htmlFile, targetElementId) {
     fetch(htmlFile)
       .then((response) => {
@@ -38,6 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
           "There has been a problem with your fetch operation:",
           error
         );
+      })
+      .finally(() => {
+        // Remove the overlay after all fetch operations are complete
+        document.body.removeChild(overlay);
       });
   }
 
