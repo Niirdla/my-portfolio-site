@@ -6,6 +6,7 @@ const projectModalImageTitle = document.getElementById(
 const projectModalImage = document.getElementById("project-modal-image");
 const projectModalVideo = document.getElementById("project-modal-video");
 const projectModalIndex = document.getElementById("project-modal-index");
+const duration = document.getElementById("duration");
 const projectItems = document.querySelectorAll(".projects-item");
 
 const leftArrow = document.querySelector(".left-arrow");
@@ -163,6 +164,8 @@ const projects = {
       "System Admin: Order List",
       "System Admin: Reports",
     ],
+    duration: "3 months (Dec 2022 - Mar 2023)",
+
     description: `Fishyfy aims to provide the client with the opportunity to monitor their products,
      both live and non-biological goods, enable them to communicate with their customers outside 
      social media platforms, and to sell and highlight their merchandise in an optimized, 
@@ -211,6 +214,7 @@ const projects = {
       "Admin: Edit User",
       "80% Display",
     ],
+    duration: "6 months (April 2023 - October 2023)",
     description: `Tri-bin aims to create a cleaner and healthier environment for students, 
     professors, and staff at National University Fairview. 
     The project also aims to enhance the efficiency of housekeeping staff in waste collection by
@@ -232,6 +236,7 @@ const projects = {
       { type: "image", src: "assets/img/projects/about-me/about-me-part2.png" },
     ],
     imageTitles: ["My Portfolio Website", "My Portfolio Website"],
+    duration: "1 month (May 2024 - Jun 2024)",
     description: `This website highlights my skills, education, and experience, 
     while also featuring my most impressive projects and certifications.`,
     keyFeatures: `<li>About Me (Skills, Experience, and Education</li> 
@@ -288,12 +293,14 @@ function updateModalContent(projectId, itemIndex) {
   //   // Slide animation for index and title
   projectModalIndex.textContent = `${itemIndex + 1}/${project.items.length}`;
   projectModalImageTitle.textContent = project.imageTitles[itemIndex];
+  duration.textContent = project.duration;
   //   projectModalIndex.classList.add(slideInClass);
   //   projectModalImageTitle.classList.add(slideInClass);
   projectModalIndex.classList.remove("hidden");
   projectModalImageTitle.classList.remove("hidden");
   projectModalImageTitle.style.display = "block";
   projectModalIndex.style.display = "block";
+  duration.style.display = "block";
   //   projectModalIndex.addEventListener(
   //     "animationend",
   //     function () {

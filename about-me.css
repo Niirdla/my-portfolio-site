@@ -101,7 +101,6 @@ section {
   max-width: 100%; /* Limit maximum width */
   white-space: normal; /* Allow text to wrap */
   margin: 0 auto; /* Center align on smaller screens */
-
   color: #8290a1;
   text-align: justify;
   line-height: 1.5rem;
